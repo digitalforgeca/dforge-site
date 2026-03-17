@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!--
+    Digital Forge — Anvil + Hammer + Flame
+    Clean, minimal SVG icon. No background, no text.
+  -->
+
+  <!-- Flame — organic multi-tongue -->
+  <g>
+    <!-- Outer left tongue -->
+    <path d="
+      M230 280 C222 250, 200 210, 210 170
+      C218 138, 232 110, 242 78
+      C236 115, 228 148, 226 175
+      C224 200, 226 240, 235 265 Z
+    " fill="#1565C0" opacity="0.6"/>
+
+    <!-- Outer right tongue -->
+    <path d="
+      M282 280 C290 250, 312 210, 302 170
+      C294 138, 280 110, 270 78
+      C276 115, 284 148, 286 175
+      C288 200, 286 240, 277 265 Z
+    " fill="#1565C0" opacity="0.6"/>
+
+    <!-- Main flame body -->
+    <path d="
+      M256 55
+      C245 90, 215 130, 208 175
+      C202 210, 210 250, 228 278
+      C232 262, 235 245, 238 228
+      C236 255, 232 272, 240 285
+      C248 295, 256 298, 264 290
+      C272 278, 276 258, 274 235
+      C277 248, 280 265, 284 280
+      C302 252, 310 215, 304 178
+      C298 138, 268 95, 256 55
+      Z
+    " fill="#1E88E5"/>
+
+    <!-- Mid flame -->
+    <path d="
+      M256 105
+      C250 135, 232 162, 228 195
+      C225 220, 232 248, 244 265
+      C243 252, 246 238, 250 225
+      C248 245, 246 258, 252 268
+      C258 272, 264 268, 266 260
+      C272 248, 268 232, 265 218
+      C268 235, 272 250, 270 262
+      C280 245, 288 222, 284 198
+      C280 168, 264 140, 256 105
+      Z
+    " fill="#42A5F5"/>
+
+    <!-- Inner bright core -->
+    <path d="
+      M256 165
+      C252 185, 244 200, 242 222
+      C241 238, 246 254, 254 262
+      C253 252, 255 242, 256 232
+      C257 244, 256 254, 260 260
+      C266 252, 270 238, 268 222
+      C266 202, 260 188, 256 165
+      Z
+    " fill="#90CAF9" opacity="0.75"/>
+  </g>
+
+  <!-- Anvil -->
+  <g>
+    <!-- Horn (left, pointed, prominent) -->
+    <polygon points="75,308 170,298 170,322 92,322" fill="#1a1a1a"/>
+
+    <!-- Top face -->
+    <polygon points="170,298 385,298 370,322 170,322" fill="#252525"/>
+
+    <!-- Hardy hole (small square notch on top face) -->
+    <rect x="350" y="300" width="12" height="10" fill="#111"/>
+
+    <!-- Waist -->
+    <polygon points="192,322 350,322 332,378 210,378" fill="#1a1a1a"/>
+
+    <!-- Base -->
+    <polygon points="155,378 385,378 405,412 135,412" fill="#222"/>
+
+    <!-- Base bottom -->
+    <polygon points="135,412 405,412 398,435 142,435" fill="#111"/>
+
+    <!-- Circuit traces -->
+    <g stroke="#2196F3" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.8">
+      <!-- Vertical main bus -->
+      <line x1="270" y1="325" x2="270" y2="410"/>
+      <!-- Left branches -->
+      <polyline points="270,345 240,345 240,370"/>
+      <polyline points="240,358 220,358"/>
+      <!-- Right branches -->
+      <polyline points="270,365 302,365 302,392"/>
+      <polyline points="302,378 322,378"/>
+      <!-- Nodes (circuit dots) -->
+      <circle cx="270" cy="335" r="4" fill="#2196F3"/>
+      <circle cx="240" cy="370" r="3" fill="#2196F3"/>
+      <circle cx="220" cy="358" r="2.5" fill="#2196F3"/>
+      <circle cx="302" cy="392" r="3" fill="#2196F3"/>
+      <circle cx="322" cy="378" r="2.5" fill="#2196F3"/>
+      <circle cx="270" cy="410" r="3.5" fill="#2196F3"/>
+    </g>
+  </g>
+
+  <!-- Hammer -->
+  <g transform="rotate(-35, 318, 230)">
+    <!-- Handle -->
+    <rect x="311" y="148" width="14" height="180" rx="5" fill="#333"/>
+
+    <!-- Head -->
+    <rect x="278" y="114" width="72" height="42" rx="6" fill="#1a1a1a"/>
+
+    <!-- Striking face -->
+    <rect x="274" y="121" width="10" height="28" rx="3" fill="#111"/>
+
+    <!-- Circuit line on head -->
+    <line x1="296" y1="134" x2="340" y2="134" stroke="#2196F3" stroke-width="2" opacity="0.5"/>
+    <circle cx="296" cy="134" r="2.5" fill="#2196F3" opacity="0.5"/>
+    <circle cx="340" cy="134" r="2.5" fill="#2196F3" opacity="0.5"/>
+  </g>
+
+  <!-- Impact sparks -->
+  <g>
+    <circle cx="278" cy="293" r="4.5" fill="#64B5F6" opacity="0.9"/>
+    <circle cx="266" cy="286" r="2.5" fill="#90CAF9" opacity="0.8"/>
+    <circle cx="288" cy="288" r="2" fill="#BBDEFB" opacity="0.7"/>
+    <circle cx="260" cy="292" r="1.5" fill="#90CAF9" opacity="0.6"/>
+    <circle cx="292" cy="295" r="1.5" fill="#BBDEFB" opacity="0.5"/>
+  </g>
+</svg>

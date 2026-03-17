@@ -1,0 +1,16 @@
+{{ $iconClass := .Params.icon_class | default "" }}
+{{ $link := .Params.link | default .Permalink }}
+{{ $linkText := .Params.link_text | default (printf "%s →" .Title) }}
+{{ $isExternal := hasPrefix $link "http" }}
+
+<a class="project-card reveal" href="{{ $link }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
+  <div class="project-card__icon{{ with $iconClass }} project-card__icon--{{ . }}{{ end }}">
+    {{ with .Params.icon_svg }}{{ . | safeHTML }}{{ end }}
+  </div>
+  <h3 class="project-card__title">{{ .Title }}</h3>
+  <p class="project-card__desc">{{ .Description }}</p>
+  <div class="project-card__tags">
+    {{ range .Params.tags }}<span>{{ . }}</span>{{ end }}
+  </div>
+  <span class="project-card__link">{{ $linkText }}</span>
+</a>

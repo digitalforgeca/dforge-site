@@ -1,0 +1,160 @@
+{{ define "title" }}Digital Forge Studios — dforge.ca{{ end }}
+
+{{ define "main" }}
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-banner">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/hero-logo.mp4" type="video/mp4">
+      </video>
+      <div class="hero-banner__fade"></div>
+    </div>
+    <div class="wrap">
+      <div class="hero-content">
+        <p class="hero-sub">{{ .Site.Params.tagline | default "We build and operate AI agent systems that research, write, deploy, and scale — autonomously. Our agents don't sleep." }}</p>
+        <a href="#projects" class="hero-cta">
+          See what we've built
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <p class="section-label reveal">// projects</p>
+      <h2 class="reveal">Forged &amp; shipping.</h2>
+      <p class="section-intro reveal">Real systems in production — not demos, not prototypes.</p>
+      <div class="divider reveal"></div>
+      <div class="project-grid">
+        {{ range where .Site.RegularPages "Section" "projects" }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <div class="wrap">
+      <p class="section-label reveal">// how it works</p>
+      <h2 class="reveal">Agents all the way down.</h2>
+
+      <div class="arch-diagram reveal">
+        <div class="arch-row arch-row--top">
+          <div class="arch-node arch-node--primary">
+            <span class="arch-node__label">Icarus</span>
+            <span class="arch-node__role">Orchestrator</span>
+          </div>
+          <div class="arch-node arch-node--hub">
+            <span class="arch-node__label">Discord</span>
+            <span class="arch-node__role">Coordination</span>
+          </div>
+          <div class="arch-node arch-node--primary">
+            <span class="arch-node__label">Daedalus</span>
+            <span class="arch-node__role">Engineer</span>
+          </div>
+        </div>
+        <div class="arch-arrows">
+          <span class="arch-arrow">↕</span>
+          <span class="arch-arrow">↕</span>
+        </div>
+        <div class="arch-row arch-row--mid">
+          <div class="arch-node arch-node--sub">
+            <span class="arch-node__label">Sonnet Agents</span>
+            <span class="arch-node__role">Research · Writing</span>
+          </div>
+          <div class="arch-node arch-node--sub">
+            <span class="arch-node__label">Sonnet Agents</span>
+            <span class="arch-node__role">Code · Deploy · CI</span>
+          </div>
+        </div>
+        <div class="arch-arrows arch-arrows--down">
+          <span class="arch-arrow">↓</span>
+          <span class="arch-arrow-center">↕</span>
+          <span class="arch-arrow">↓</span>
+        </div>
+        <div class="arch-row arch-row--bottom">
+          {{ range .Site.Data.arch_outputs }}
+          <div class="arch-node arch-node--output">
+            <span class="arch-node__label">{{ .label }}</span>
+            <span class="arch-node__role">{{ .role }}</span>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <ul class="arch-bullets reveal">
+        <li>Two orchestrators (<strong>Claude Opus 4.6</strong>) handle strategy, architecture, and code review across <strong>{{ len (where .Site.RegularPages "Section" "projects") }} projects</strong></li>
+        <li><strong>Sonnet 4.6</strong> sub-agents execute research, implementation, and testing in parallel</li>
+        <li><strong>Discord</strong> serves as the coordination layer — agents discuss, delegate, and ship in real-time</li>
+        <li>Open source libraries on <strong>GitHub</strong> (<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">digitalforgeca</a>) — Sulcus, Pavlov gamification, Minerva SDK</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE -->
+  <section id="subscribe">
+    <div class="wrap">
+      <div class="subscribe-inner">
+        <p class="section-label reveal">// stay in the loop</p>
+        <h2 class="reveal">Get notified</h2>
+        <p class="section-intro reveal">New projects, tools, and insights from the forge. No spam.</p>
+        <form class="subscribe-form reveal" id="subscribe-form">
+          <input type="email" id="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+          <button type="submit">Subscribe</button>
+        </form>
+        <p class="subscribe-msg" id="subscribe-msg"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN SOURCE -->
+  <section id="open-source">
+    <div class="wrap">
+      <div class="support-inner reveal">
+        <p class="support-heading">Open source</p>
+        <div class="support-buttons">
+          <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" class="support-btn">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="support-btn__icon"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="{{ .Site.Params.npm }}" target="_blank" rel="noopener" class="support-btn">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="support-btn__icon"><path fill="currentColor" d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"/></svg>
+            npm
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ end }}
+
+{{ define "scripts" }}
+  <script>
+    document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('subscribe-msg');
+      const email = document.getElementById('email').value.trim();
+      if (!email) return;
+      msg.textContent = 'Subscribing...';
+      msg.className = 'subscribe-msg';
+      try {
+        const res = await fetch('/api/subscribe.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        msg.textContent = data.message;
+        msg.className = 'subscribe-msg ' + (data.success ? 'subscribe-msg--ok' : 'subscribe-msg--err');
+        if (data.success) document.getElementById('email').value = '';
+      } catch {
+        msg.textContent = 'Something went wrong. Try again.';
+        msg.className = 'subscribe-msg subscribe-msg--err';
+      }
+    });
+  </script>
+{{ end }}

@@ -1,0 +1,16 @@
+baseURL = "https://dforge.ca/"
+languageCode = "en-ca"
+title = "Digital Forge Studios"
+theme = "dforge"
+
+[params]
+  description = "AI-native infrastructure. Multi-agent systems. Autonomous operations."
+  email = "admin@dforge.ca"
+  github = "https://github.com/digitalforgeca"
+  npm = "https://www.npmjs.com/org/digitalforgestudios"
+
+[taxonomies]
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true

@@ -1,0 +1,6 @@
+name = "dforge"
+license = "MIT"
+description = "Digital Forge Studios theme"
+
+[author]
+  name = "Digital Forge Studios"
