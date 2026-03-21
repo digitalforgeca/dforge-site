@@ -229,6 +229,26 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ─── RESEARCH PAPER ───────────────────────────────────────────── */
+.paper-meta { background: #111; border-left: 3px solid #f90; padding: 1rem 1.25rem; margin: 1.5rem 0 2rem; font-size: .9rem; line-height: 1.6; }
+.paper-footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #222; font-size: .8rem; color: #666; }
+
+/* ─── NDA ──────────────────────────────────────────────────────── */
+.nda-container { max-width: 800px; margin: 0 auto; }
+.nda-text { background: #0d0d0e; border: 1px solid #222; border-radius: 8px; padding: 2rem; margin: 1.5rem 0; max-height: 500px; overflow-y: auto; font-size: .85rem; line-height: 1.7; }
+.nda-form { margin-top: 2rem; }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label { display: block; margin-bottom: .4rem; font-size: .9rem; color: #ccc; }
+.form-group input[type="text"],
+.form-group input[type="email"] { width: 100%; padding: .6rem .8rem; background: #111; border: 1px solid #333; border-radius: 4px; color: #eee; font-size: .9rem; }
+.form-group input:focus { border-color: #f90; outline: none; }
+.checkbox-group { display: flex; align-items: flex-start; gap: .6rem; }
+.checkbox-group input[type="checkbox"] { margin-top: .3rem; accent-color: #f90; }
+.checkbox-group label { font-size: .8rem; color: #aaa; line-height: 1.5; }
+.nda-submit { display: inline-block; padding: .75rem 2rem; background: #f90; color: #000; border: none; border-radius: 4px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 1rem; }
+.nda-submit:hover { background: #fa0; }
+.nda-confirmed { text-align: center; padding: 3rem 0; }
+
 /* ─── MOBILE ───────────────────────────────────────────────────── */
 @media (max-width: 600px) {
   .nav-links { gap: 1rem; }
